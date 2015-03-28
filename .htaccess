@@ -1,0 +1,54 @@
+#AuthName "Restricted Area"  
+#AuthType Basic 
+#AuthUserFile /home/familyed/public_html/.htpasswd
+#AuthGroupFile /dev/null 
+#require valid-user
+
+#AddOutputFilterByType DEFLATE text/plain
+#AddOutputFilterByType DEFLATE text/html
+#AddOutputFilterByType DEFLATE text/xml
+#AddOutputFilterByType DEFLATE text/css
+#AddOutputFilterByType DEFLATE application/xml
+#AddOutputFilterByType DEFLATE application/xhtml+xml
+#AddOutputFilterByType DEFLATE application/rss+xml
+#AddOutputFilterByType DEFLATE application/javascript
+#AddOutputFilterByType DEFLATE application/x-javascript
+
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+#RewriteCond %{HTTP_HOST} !^$
+#RewriteCond %{HTTP_HOST} !^www\. [NC]
+#RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+#Home
+RewriteRule ^$ index.php?page=Home&nav=home [NC]
+
+#People
+RewriteRule ^Prof-Teiichi-Ando$ people.php?page=prof&nav=people [NC]
+RewriteRule ^Graduate-Students$ people.php?page=grads&nav=people [NC]
+RewriteRule ^Undergraduate-Students$ people.php?page=undergrad&nav=people [NC]
+RewriteRule ^VIsiting-Research-Associates$ people.php?page=visiting&nav=people [NC]
+RewriteRule ^Alumni$ people.php?page=alumni&nav=people [NC]
+RewriteRule ^Previous-Visiting-Scholars$ people.php?page=scholars&nav=people [NC]
+
+#Research
+RewriteRule ^Research-Areas$ research.php?page=research&nav=research [NC]
+RewriteRule ^Sponsors$ research.php?page=sponsors&nav=research [NC]
+
+#Facilities
+RewriteRule ^Facilities$ facilities.php?page=facilities&nav=facilities [NC]
+
+#Collaborators
+RewriteRule ^Collaborators$ collaborators.php?page=collaborators&nav=collaborators [NC]
+
+#Publications
+RewriteRule ^Publications$ publications.php?page=publications&nav=publications [NC]
+
+#Events
+RewriteRule ^Events$ events.php?page=events&nav=events [NC]
+
+
+
+
+
