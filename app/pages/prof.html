@@ -1,0 +1,44 @@
+<div class="inside">
+<div class="container">
+	<div class="col-xs-4">
+		<div id="profile">
+			<img src="{{prof.img}}" alt="" style="width:100%;">
+			<div id="profileDetail">
+				<h2>Prof. Teiichi Ando</h2>
+				<address>
+					<strong>Phone:</strong> {{prof.phone}}<br>
+					<strong>Email:</strong> <a href="mailto:tando@coe.neu.edu" target="_blank">tando@coe.neu.edu</a><br>
+				</address>
+				<quote><em>"{{prof.intro}}"</em></quote>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-8">
+		<div id="bio">
+			<h1 style="text-align:left;">Prof. Teiichi Ando</h1>
+
+			<h3>Education</h3>
+			<p ng-repeat="education in prof.educations">{{education}}</p>
+
+			<h3>Research Interests</h3>
+			<ul>
+				<li ng-repeat="research in prof.researches">{{research}}</li>
+			</ul>
+			
+			<h3>Teaching Areas</h3>
+			<h4>Undergraduate Courses</h4>
+			<ul>
+				<li ng-repeat="undergradCourse in prof.undergradCourses">{{undergradCourse}}</li>
+			</ul>
+
+			<h4>Graduate Courses</h4>
+			<ul>
+				<li ng-repeat="gradCourse in prof.gradCourses">{{gradCourse}}</li>
+			</ul>
+
+			<h3>Publications</h3>
+			<p>Please click <a href="Publications">here</a> to see the list of selected publications.</p>
+		</div>
+	</div>
+</div>
+</div>

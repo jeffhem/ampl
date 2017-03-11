@@ -1,0 +1,31 @@
+<div class="inside">
+	<div class="container">
+		<h1> Graduate Students</h1>
+		<div class="col-xs-3" ng-repeat="grad in grads" ng-click="open($index)">
+			<div class="profileGrid">
+				<img src="{{grad.img}}" alt="" style="width:100%;">
+				<h3>{{grad.name}}</h3>
+				<span>{{grad.type}}</span>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-body">
+		<button type="button" class="close" data-dismiss="modal" ng-click="cancel()"><span aria-hidden="true">&times;</span></button>
+		<h1>{{grad.name}}</h1>
+
+		<h3>Education</h3>
+		<p ng-repeat="education in grad.educations">{{education}}</p>
+
+		<h3>Research Interests</h3>
+		<ul>
+			<li ng-repeat="research in grad.researches">{{research}}</li>
+		</ul>
+
+		<h3 ng-hide="!grad.publications.length">Publications</h3>
+		<ul>
+			<li ng-repeat="publication in grad.publications">{{publication}}</li>
+		</ul>
+	</div>
+</script>

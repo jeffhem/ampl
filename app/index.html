@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AMPL</title>    
+    <link href="lib.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <base href="/Research/AMPL/redesign/">
+  </head>
+  <body ng-app="ampl">
+    <header class="wrapper">
+      <div class="container">
+        <div id="logo" class="col-xs-2"></div>
+        <div id="headerLinks" class="col-xs-10">
+          <div id="topLinks" class="pull-right">
+            <a href="/Research/AMPL/redesign/">Home</a>
+            |
+            <a href="/Research/AMPL/redesign/Events">Events</a>
+          </div>
+
+          
+          <nav class="">
+            <li class="people"><a href="/Research/AMPL/redesign/people/Prof-Teiichi-Ando">People</a>
+              <ul>
+                <li><a href="/Research/AMPL/redesign/people/Prof-Teiichi-Ando">Prof. Teiichi Ando</a></li>
+                <li><a href="/Research/AMPL/redesign/people/Graduate-Students">Graduate Students</a></li>
+                <li><a href="/Research/AMPL/redesign/people/Undergraduate-Students">Undergraduate Students</a></li>
+                <li><a href="/Research/AMPL/redesign/people/Visiting-Research-Associates">Visiting Research Associates</a></li>
+                <li><a href="/Research/AMPL/redesign/people/Alumni">Alumni</a></li>
+                <li><a href="/Research/AMPL/redesign/people/Previous-Visiting-Scholars">Previous Visiting Scholars</a></li>
+              </ul>
+            </li>
+            <li class="research"><a href="/Research/AMPL/redesign/Research-Areas">Research</a></li>
+            <li class="facilities"><a href="/Research/AMPL/redesign/Facilities">Facilities</a></li>
+            <li class="collaborators"><a href="/Research/AMPL/redesign/Collaborators">Collaborators</a></li>
+            <li class="publications"><a href="/Research/AMPL/redesign/Publications">Publications</a></li>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper" ng-view=""></main>
+    <footer class="wrapper">
+      <div class="container">
+        <div id="neuLogo" class="col-xs-4"></div>
+        <div id="copyRight" class="col-xs-8">
+          © 2015 Advanced Materials Processing Laboratory<br>
+          All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="lib.js"></script>
+    <script src="templates.js"></script>
+    <script src="app.js"></script>
+    <script src="ui-bootstrap-tpls.js"></script>
+  </body>
+</html>

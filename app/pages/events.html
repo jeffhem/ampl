@@ -1,0 +1,19 @@
+<div class="inside">
+	<div class="container">
+		<div class="col-xs-9" style="margin:0 auto; float:none;">
+			<h1>Events</h1>
+				<div ng-repeat="event in events">
+					<h2>{{event.name}}</h2>
+					<p>{{event.desc}}</p>
+					<div class="col-xs-6" ng-repeat="image in event.images" style="padding-top:2rem" ng-hide="image.img == ''">
+						<img src="{{image.img}}" width="100%">
+						<caption>{{image.cap}}</caption>
+					</div>
+					<div class="clearfix"></div>
+					<hr>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

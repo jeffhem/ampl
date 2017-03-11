@@ -1,0 +1,24 @@
+<div class="inside">
+<div class="container">
+	<div class="col-xs-3">
+		<h2>Sponsors</h2>
+		<a ng-repeat="sponsor in sponsors" href="{{sponsor.link}}"><img src="{{sponsor.img}}" class="sponsorImg"></a>
+	</div>
+	<div class="col-xs-9">
+		<h1>Research Areas</h1>
+		<accordion >
+		    <accordion-group heading="{{research.title}}" ng-repeat="research in researches" is-disabled="research.head == ''"> 
+		      <h2>{{research.head}}</h2>
+		      <div ng-repeat="content in research.contents">
+		      	<h3>{{content.subHead}}</h3>
+		      	<div ng-bind-html="content.text"></div>
+		      </div>
+		      <div class="col-xs-6" ng-repeat="images in research.images" style="padding-top:2rem">
+		      	<img src="{{images.img}}" width="100%">
+		      	<caption>{{images.cap}}</caption>
+		      </div>
+		    </accordion-group>
+		</accordion>
+	</div>
+</div>
+</div>
